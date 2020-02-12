@@ -8,6 +8,7 @@ Choose your book. G(g)o book.
 - [x] Request secret
 - [x] Confirm secret
 - [x] Like / Unlike Post
+- [x] Comment on a Post
 - [ ] Login / Signup
 - [ ] See the library
 - [ ] See user profile
