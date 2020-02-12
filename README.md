@@ -16,9 +16,9 @@ Choose your book. G(g)o book.
 - [x] See user profile
 - [x] See my profile
 - [x] See full post
-- [ ] Upload a photo
-- [ ] Edit the photo
-- [ ] See the feed
+- [x] Upload a photo
+- [x] Edit the photo
+- [x] See the feed
 - [ ] See rooms
 - [ ] See room
 - [ ] Send private message

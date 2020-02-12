@@ -6,6 +6,8 @@ type User {
   lastName: String
   fullName: String
   bio: String
+  createdAt: String
+  updatedAt: String
   isFollowing: Boolean!
   isMe: Boolean!
   following: [User!]!
@@ -22,6 +24,8 @@ type Post {
   caption: String!
   user: User!
   isLiked: Boolean!
+  createdAt: String
+  updatedAt: String
   files: [File!]!
   likes: [Like!]!
   comments: [Comment!]!
@@ -31,6 +35,8 @@ type Like {
   id: ID!
   user: User!
   post: Post!
+  createdAt: String
+  updatedAt: String
 }
 
 type Comment {
@@ -38,17 +44,23 @@ type Comment {
   text: String!
   user: User!
   post: Post!
+  createdAt: String
+  updatedAt: String
 }
 
 type File {
   id: ID!
   url: String!
   post: Post!
+  createdAt: String
+  updatedAt: String
 }
 
 type Image {
   id: ID!
   url: String!
+  createdAt: String
+  updatedAt: String
 }
 
 type Book {
@@ -58,12 +70,16 @@ type Book {
   author: String!
   publisher: String!
   image: Image!
+  createdAt: String
+  updatedAt: String
 }
 
 type Room {
   id: ID!
   participants: [User!]!
   messages: [Message!]!
+  createdAt: String
+  updatedAt: String
 }
 
 type Message {
@@ -72,9 +88,13 @@ type Message {
   from: User!
   to: User!
   room: Room!
+  createdAt: String
+  updatedAt: String
 }
 
 type UserProfile {
   user: User!
   posts: [Post!]!
+  createdAt: String
+  updatedAt: String
 }
