@@ -14,7 +14,8 @@ Choose your book. G(g)o book.
 - [x] Follow / Unfollow User
 - [x] Edit my profile
 - [x] See user profile
-- [ ] See my profile
+- [x] See my profile
+- [x] See full post
 - [ ] Login / Signup
 - [ ] See the library
 - [ ] Upload a photo
