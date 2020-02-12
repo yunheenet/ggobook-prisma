@@ -14,8 +14,7 @@ export const generateSecret = () => {
 export const sendMail = email => {
   const options = {
     auth: {
-      api_user: process.env.SENDGRID_USERNAME,
-      api_key: process.env.SENDGRID_PASSWORD
+      api_key: process.env.SENDGRID_KEY
     }
   };
   const client = nodemailer.createTransport(sendGridTransport(options));
@@ -24,10 +23,10 @@ export const sendMail = email => {
 
 export const sendSecretMail = (address, secret) => {
   const email = {
-    from: "ggobook@gmail.com",
+    from: "ggobooking@gmail.com",
     to: address,
-    subject: "Login Secret for GgoBook",
-    html: `Hello! Your login secret it ${secret}.<br/>Copy paste on the app/Website`
+    subject: "🔐Login Secret for GgoBook🔐",
+    html: `Hello! Your login secret is <strong>${secret}</strong>.<br/>Copy paste on the app/Website to log in`
   };
   return sendMail(email);
 };

@@ -5,8 +5,8 @@ Choose your book. G(g)o book.
 ## User Stories
 
 - [x] Create account
-- [ ] Request secret
-- [ ] Confirm secret
+- [x] Request secret
+- [x] Confirm secret
 - [ ] Login / Signup
 - [ ] See the library
 - [ ] See user profile
