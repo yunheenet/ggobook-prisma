@@ -4,7 +4,10 @@ type User {
   email: String!
   firstName: String
   lastName: String
+  fullName: String
   bio: String
+  isFollowing: Boolean!
+  isMe: Boolean!
   following: [User!]!
   followers: [User!]!
   posts: [Post!]!
