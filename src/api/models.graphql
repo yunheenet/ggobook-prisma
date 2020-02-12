@@ -21,6 +21,7 @@ type Post {
   location: String
   caption: String!
   user: User!
+  isLiked: Boolean!
   files: [File!]!
   likes: [Like!]!
   comments: [Comment!]!

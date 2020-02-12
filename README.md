@@ -16,11 +16,11 @@ Choose your book. G(g)o book.
 - [x] See user profile
 - [x] See my profile
 - [x] See full post
-- [ ] Login / Signup
-- [ ] See the library
 - [ ] Upload a photo
+- [ ] Edit the photo
 - [ ] See the feed
 
+- [ ] See the library
 - [ ] Memo Post
 - [ ] Search by book
 - [ ] Search by isbn
