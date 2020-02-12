@@ -9,12 +9,13 @@ Choose your book. G(g)o book.
 - [x] Confirm secret
 - [x] Like / Unlike Post
 - [x] Comment on a Post
+- [ ] Search by user
+- [ ] Search by book
+- [ ] Search by isbn
 - [ ] Login / Signup
 - [ ] See the library
 - [ ] See user profile
 - [ ] Edit my profile
-- [ ] Search by book
-- [ ] Search by isbn
 - [ ] Follow / Unfollow User
 - [ ] Memo Post
 - [ ] Upload a photo
