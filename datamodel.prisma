@@ -19,28 +19,28 @@ type Post {
   location: String
   caption: String!
   user: User!
-  files: [File!]!
-  likes: [Like!]!
-  comments: [Comment!]!
+  files: [File!]! @relation(name: "FileToPost", onDelete: CASCADE)
+  likes: [Like!]! @relation(name: "LikeToPost", onDelete: CASCADE)
+  comments: [Comment!]! @relation(name: "CommentToPost", onDelete: CASCADE)
 }
 
 type Like {
   id: ID! @id
   user: User!
-  post: Post!
+  post: Post! @relation(name: "LikeToPost")
 }
 
 type Comment {
   id: ID! @id
   text: String!
   user: User!
-  post: Post!
+  post: Post! @relation(name: "CommentToPost")
 }
 
 type File {
   id: ID! @id
   url: String!
-  post: Post!
+  post: Post! @relation(name: "FileToPost")
 }
 
 type Image {
