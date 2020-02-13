@@ -5,6 +5,7 @@ type User {
   firstName: String @default(value: "")
   lastName: String
   bio: String
+  avatar: String
   following: [User!]! @relation(name: "FollowRelation")
   followers: [User!]! @relation(name: "FollowRelation")
   posts: [Post!]!

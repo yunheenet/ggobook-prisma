@@ -19,9 +19,9 @@ Choose your book. G(g)o book.
 - [x] Upload a photo
 - [x] Edit the photo
 - [x] See the feed
-- [ ] See rooms
-- [ ] See room
-- [ ] Send private message
+- [x] See rooms
+- [x] See room
+- [x] Send private message
 - [ ] Receive message (realtime)
 
 - [ ] See the library
