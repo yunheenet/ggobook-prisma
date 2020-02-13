@@ -22,7 +22,7 @@ Choose your book. G(g)o book.
 - [x] See rooms
 - [x] See room
 - [x] Send private message
-- [ ] Receive message (realtime)
+- [x] Receive message (realtime)
 
 - [ ] See the library
 - [ ] Memo Post
