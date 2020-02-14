@@ -14,7 +14,7 @@ type User {
   following: [User!]!
   followingCount: Int!
   followers: [User!]!
-  followerCount: Int!
+  followersCount: Int!
   posts: [Post!]!
   likes: [Like!]!
   comments: [Comment!]!
@@ -27,6 +27,7 @@ type Post {
   caption: String!
   user: User!
   isLiked: Boolean!
+  likeCount: Int!
   createdAt: String
   updatedAt: String
   files: [File!]!
