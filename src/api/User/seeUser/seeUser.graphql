@@ -1,3 +1,3 @@
 type Query {
-  seeUser(usrname: String!): User!
+  seeUser(username: String!): User!
 }

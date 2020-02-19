@@ -7,18 +7,20 @@ type User {
   fullName: String
   bio: String
   avatar: String
-  createdAt: String
-  updatedAt: String
   isFollowing: Boolean!
-  isMe: Boolean!
+  isSelf: Boolean!
   following: [User!]!
   followingCount: Int!
   followers: [User!]!
   followersCount: Int!
   posts: [Post!]!
+  postsCount: Int!
   likes: [Like!]!
   comments: [Comment!]!
   rooms: [Room!]!
+  loginSecret: String!
+  createdAt: String
+  updatedAt: String
 }
 
 type Post {
