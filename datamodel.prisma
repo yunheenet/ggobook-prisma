@@ -67,7 +67,10 @@ type Book {
   title: String!
   author: String!
   publisher: String!
-  image: Image!
+  coverLargeUrl: String
+  coverSmallUrl: String
+  link: String
+  mobileLink: String
   createdAt: DateTime! @createdAt
   updatedAt: DateTime! @updatedAt
 }
