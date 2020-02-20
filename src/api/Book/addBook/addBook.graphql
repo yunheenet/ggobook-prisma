@@ -1,0 +1,12 @@
+type Mutation {
+  addBook(
+    isbn: String!
+    title: String!
+    author: String!
+    publisher: String!
+    coverLargeUrl: String
+    coverSmallUrl: String
+    link: String
+    mobileLink: String
+  ): Book!
+}
