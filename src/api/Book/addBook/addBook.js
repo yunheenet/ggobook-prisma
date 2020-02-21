@@ -21,6 +21,7 @@ export default {
         }
 
         const {
+          id,
           title,
           author,
           publisher,
@@ -32,6 +33,7 @@ export default {
         } = await requestInterparkBookSearch(isbn);
 
         const book = await prisma.createBook({
+          id,
           isbn,
           title,
           author,
