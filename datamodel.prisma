@@ -67,6 +67,7 @@ type Book {
   title: String!
   author: String!
   publisher: String!
+  description: String
   coverLargeUrl: String
   coverSmallUrl: String
   link: String
