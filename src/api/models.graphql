@@ -18,6 +18,7 @@ type User {
   likes: [Like!]!
   comments: [Comment!]!
   rooms: [Room!]!
+  books: [Book!]!
   loginSecret: String!
   createdAt: String
   updatedAt: String
