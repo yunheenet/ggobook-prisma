@@ -62,7 +62,7 @@ type Image {
   updatedAt: DateTime! @updatedAt
 }
 
-type Book {
+type GgoBook {
   id: ID! @id
   isbn: String!
   title: String!
@@ -73,6 +73,24 @@ type Book {
   coverSmallUrl: String
   link: String
   mobileLink: String
+  createdAt: DateTime! @createdAt
+  updatedAt: DateTime! @updatedAt
+}
+
+type Book {
+  id: ID! @id
+  data: GgoBook!
+  user: User!
+  memos: [Memo!]! @relation(name: "MemoToBook", onDelete: CASCADE)
+  createdAt: DateTime! @createdAt
+  updatedAt: DateTime! @updatedAt
+}
+
+type Memo {
+  id: ID! @id
+  text: String!
+  user: User!
+  book: Book! @relation(name: "MemoToBook")
   createdAt: DateTime! @createdAt
   updatedAt: DateTime! @updatedAt
 }

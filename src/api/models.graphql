@@ -71,7 +71,7 @@ type Image {
   updatedAt: String
 }
 
-type Book {
+type GgoBook {
   id: ID!
   isbn: String!
   title: String!
@@ -82,6 +82,24 @@ type Book {
   coverSmallUrl: String
   link: String
   mobileLink: String
+  createdAt: String
+  updatedAt: String
+}
+
+type Book {
+  id: ID!
+  data: GgoBook!
+  user: User!
+  memos: [Memo!]!
+  createdAt: String
+  updatedAt: String
+}
+
+type Memo {
+  id: ID!
+  text: String!
+  user: User!
+  book: Book!
   createdAt: String
   updatedAt: String
 }
