@@ -41,7 +41,7 @@ export const requestInterparkBookSearch = async isbn => {
       data: { item }
     } = await axios.get(query);
 
-    if (item.length == 0) {
+    if (item.length === 0) {
       throw Error("Can't find this book.");
     }
 

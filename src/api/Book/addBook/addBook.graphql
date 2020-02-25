@@ -1,3 +1,0 @@
-type Mutation {
-  addBook(isbn: String!): Book
-}

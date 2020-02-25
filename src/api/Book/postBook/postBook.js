@@ -15,8 +15,12 @@ export default {
           },
           data: {
             books: {
-              connect: {
-                id: bookId
+              create: {
+                data: {
+                  connect: {
+                    id: bookId
+                  }
+                }
               }
             }
           }

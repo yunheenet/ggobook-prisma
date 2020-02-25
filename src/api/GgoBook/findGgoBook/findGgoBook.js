@@ -1,27 +1,18 @@
-import { isAuthenticated } from "../../../middlewares";
 import { prisma } from "../../../../generated/prisma-client";
 import { requestInterparkBookSearch } from "../../../utils";
 
 export default {
-  Mutation: {
-    addBook: async (_, args, { request }) => {
-      isAuthenticated(request);
+  Query: {
+    findGgoBook: async (_, args) => {
       const { isbn } = args;
-      const { user } = request;
+
+      const ggoBooks = await prisma.ggoBooks({ where: { isbn } });
+      if (ggoBooks.length !== 0) {
+        return ggoBooks[0];
+      }
 
       try {
-        const findBook = await prisma.books({
-          where: {
-            isbn
-          }
-        });
-
-        if (findBook.length !== 0) {
-          return findBook[0];
-        }
-
         const {
-          id,
           title,
           author,
           publisher,
@@ -32,20 +23,17 @@ export default {
           mobileLink
         } = await requestInterparkBookSearch(isbn);
 
-        const book = await prisma.createBook({
-          id,
+        return await prisma.createGgoBook({
           isbn,
           title,
           author,
-          description,
           publisher,
+          description,
           coverLargeUrl,
           coverSmallUrl,
           link,
           mobileLink
         });
-        console.log("createBook:" + book.isbn);
-        return book;
       } catch (e) {
         throw Error(e);
       }
