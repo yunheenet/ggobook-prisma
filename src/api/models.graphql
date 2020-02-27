@@ -92,6 +92,7 @@ type Book {
   user: User!
   caption: String
   memos: [Memo!]!
+  isMyBook: Boolean!
   createdAt: String
   updatedAt: String
 }
