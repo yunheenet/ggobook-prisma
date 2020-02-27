@@ -90,6 +90,7 @@ type Book {
   id: ID!
   data: GgoBook!
   user: User!
+  caption: String
   memos: [Memo!]!
   createdAt: String
   updatedAt: String

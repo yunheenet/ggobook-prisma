@@ -81,6 +81,7 @@ type Book {
   id: ID! @id
   data: GgoBook!
   user: User!
+  caption: String
   memos: [Memo!]! @relation(name: "MemoToBook", onDelete: CASCADE)
   createdAt: DateTime! @createdAt
   updatedAt: DateTime! @updatedAt
