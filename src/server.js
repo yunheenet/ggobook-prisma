@@ -1,3 +1,4 @@
+import "@babel/polyfill";
 import "./env";
 import { GraphQLServer } from "graphql-yoga";
 import logger from "morgan";
