@@ -2,7 +2,7 @@ import { prisma } from "../../../generated/prisma-client";
 
 export default {
   User: {
-    books: ({ id }) => prisma.user({ id }).books(),
+    books: ({ id }) => prisma.user({ id }).books({ orderBy: "createdAt_DESC" }),
     posts: ({ id }) => prisma.user({ id }).posts(),
     following: ({ id }) => prisma.user({ id }).following(),
     followers: ({ id }) => prisma.user({ id }).followers(),
