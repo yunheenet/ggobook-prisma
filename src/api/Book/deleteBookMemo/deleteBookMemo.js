@@ -14,10 +14,12 @@ export default {
           id: user.id
         }
       });
-      console.log(memo);
-      if (memo) {
-        return await prisma.deleteMemo({ id: memoId });
+
+      if (!memo) {
+        return undefined;
       }
+
+      return await prisma.deleteMemo({ id: memoId });
     }
   }
 };

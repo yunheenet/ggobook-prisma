@@ -3,7 +3,7 @@ import { prisma } from "../../../../generated/prisma-client";
 
 export default {
   Mutation: {
-    deleteBookMemo: async (_, args, { request }) => {
+    editBookMemo: async (_, args, { request }) => {
       isAuthenticated(request);
       const { memoId, text } = args;
       const { user } = request;
@@ -14,9 +14,12 @@ export default {
           id: user.id
         }
       });
+
       if (memo) {
         return await prisma.updateMemo({
-          data: text,
+          data: {
+            text
+          },
           where: {
             id: memoId
           }
