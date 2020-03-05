@@ -36,10 +36,10 @@
     "deploy": "prisma deploy",
     "generate": "prisma generate",
     "prisma": "yarn run deploy && yarn run generate",
-    "dev": "nodemon --exec babel-node src/server.js",
+    "dev": "nodemon --exec babel-node src/app.js",
     "prebuild": "yarn run generate",
     "build": "babel src -d build",
     "postbuild": "cd src && copy ./api/**/*.graphql ../build/api",
-    "start": "node build/server.js"
+    "start": "node build/app.js"
   }
 }
