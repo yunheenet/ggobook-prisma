@@ -11,10 +11,10 @@ export default {
       const book = await prisma.$exists.book({ id, user: { id: user.id } });
       if (book) {
         try {
-          prisma.deleteBook({ id });
+          await prisma.deleteBook({ id });
           return true;
-        } catch {
-          return false;
+        } catch (e) {
+          console.log(e);
         }
       }
 
