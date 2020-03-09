@@ -12,7 +12,7 @@ type User {
   likes: [Like!]!
   comments: [Comment!]!
   rooms: [Room!]!
-  books: [Book!]!
+  books: [Book!]! @relation(name: "BooksByUser", onDelete: CASCADE)
   loginSecret: String
   createdAt: DateTime! @createdAt
   updatedAt: DateTime! @updatedAt
@@ -80,7 +80,7 @@ type GgoBook {
 type Book {
   id: ID! @id
   data: GgoBook!
-  user: User!
+  user: User! @relation(name: "BooksByUser")
   caption: String
   memos: [Memo!]! @relation(name: "MemoToBook", onDelete: CASCADE)
   createdAt: DateTime! @createdAt
