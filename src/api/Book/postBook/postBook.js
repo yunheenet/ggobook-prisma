@@ -25,9 +25,11 @@ export default {
             }
           }
         });
-        return true;
-      } catch {
-        return false;
+
+        const books = await prisma.user({ id: user.id }).books({ last: 1 });
+        return books[0];
+      } catch (e) {
+        console.log(e);
       }
     }
   }
