@@ -23,12 +23,16 @@ export default {
           mobileLink
         } = await requestInterparkBookSearch(isbn);
 
+        const replacedDescription = String(description)
+          .replace(/&#34/g, '"')
+          .replace(/&#39/g, "'");
+
         return await prisma.createGgoBook({
           isbn,
           title,
           author,
           publisher,
-          description,
+          replacedDescription,
           coverLargeUrl,
           coverSmallUrl,
           link,
