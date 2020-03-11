@@ -32,7 +32,7 @@ export default {
           title,
           author,
           publisher,
-          replacedDescription,
+          description: replacedDescription,
           coverLargeUrl,
           coverSmallUrl,
           link,
